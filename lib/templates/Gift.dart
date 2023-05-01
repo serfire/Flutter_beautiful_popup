@@ -43,11 +43,15 @@ class TemplateGift extends BeautifulPopupTemplate {
         ),
       );
       final minHeight = 40.0 - (outline ? 4 : 0);
-      return RaisedButton(
-        color: Colors.transparent,
-        elevation: elevation,
-        highlightElevation: 0,
-        splashColor: Colors.transparent,
+      return ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.all(0),
+          elevation: elevation,
+          backgroundColor: Colors.transparent, // background
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+        ),
         child: Ink(
           decoration: decoration,
           child: Container(
@@ -65,10 +69,10 @@ class TemplateGift extends BeautifulPopupTemplate {
             ),
           ),
         ),
-        padding: EdgeInsets.all(0),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
-        ),
+        // padding: EdgeInsets.all(0),
+        // shape: RoundedRectangleBorder(
+        //   borderRadius: BorderRadius.circular(50),
+        // ),
         onPressed: onPressed,
       );
     };
