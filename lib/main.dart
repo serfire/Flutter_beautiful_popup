@@ -124,7 +124,7 @@ class BeautifulPopup {
     final illustrationData = await rootBundle.load(instance.illustrationKey);
     final buffer = illustrationData.buffer.asUint8List();
     img.Image? asset;
-    asset = img.readPng(buffer);
+    asset = img.decodePng(buffer);
     if (asset != null) {
       img.adjustColor(
         asset,
